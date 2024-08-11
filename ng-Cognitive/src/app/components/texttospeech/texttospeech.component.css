@@ -1,0 +1,174 @@
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.text-area {
+    width: 500px;
+    height: 100px;
+}
+
+.custom-button {
+    background-color: #4CAF50;
+    /* Green background */
+    border: none;
+    /* Remove borders */
+    color: white;
+    /* White text */
+    padding: 15px 32px;
+    /* Add some padding */
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove underline from text */
+    display: inline-block;
+    /* Display inline-block */
+    font-size: 16px;
+    /* Set font size */
+    margin: 4px 2px;
+    /* Add some margin */
+    transition-duration: 0.4s;
+    /* 0.4 second transition effect to hover state */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    border-radius: 4px;
+    /* Add rounded corners */
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+/* Style the label */
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style the dropdown */
+.dropdown {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Optional: Style the dropdown when it's focused */
+.dropdown:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.textbox {
+    width: 500px;
+    margin: -10px;
+    height: 150px;
+    text-align: center;
+    padding: 0px;
+}
+
+.custom-button:hover {
+    background-color: white;
+    /* White background */
+    color: #4CAF50;
+    /* Green text */
+    border: 1px solid #4CAF50;
+    /* Add green border */
+}
+
+.radio-button-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.radio-button-group legend {
+    padding: 0 5px;
+    font-size: 1.1em;
+}
+
+.radio-button-group label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.radio-button-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* your-component.component.css */
+:host {
+    position: relative;
+    /* This is required for the absolute positioning of the pseudo-element */
+    display: block;
+    /* or 'flex', 'inline-block', etc., depending on your layout */
+    min-height: 100px;
+    /* or whatever height you need */
+    z-index: 0;
+}
+
+:host::after {
+    content: '';
+    /* background-image: url(../assets/texttospeech.webp); */
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.2;
+    /* Adjust your opacity here */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    height: 550px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
+    .terminal {
+        width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+        height: 16px;
+        margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+        margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+        right: 120px;
+        transform: rotate(-5deg);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+        display: none;
+        visibility: hidden;
+    }
+}
+.custom-width{
+    align-content: center;
+}

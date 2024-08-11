@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="radio-button-group">
+      <legend>Choose a Voice Gender :</legend>
+      <label for="option1">
+        <input type="radio" id="option1" name="options" [(ngModel)]="voiceGender" value="F">
+        Female
+      </label>
+      <label for="option2">
+        <input type="radio" id="option2" name="options" [(ngModel)]="voiceGender" value="M">
+        Male
+      </label>
+    </div>
+    <div class="row dropdown-container">
+      <label for="myDropdown">Choose a Language :</label>
+      <select [(ngModel)]="selectedLang" class="dropdown">
+        <option value="1">--Choose Language--</option>
+        <option *ngFor="let lang of languageOptions" [value]="lang.value">
+          {{ lang.label }}
+        </option>
+      </select>
+    </div>
+    <p>Give the text for conversion:</p>
+    <textarea [(ngModel)]="textToSynthesize" class="text-area"></textarea><br>
+    <button (click)="synthesizeText()" class="custom-button">Convert Text to Speech</button>
+</div>
+<div class="container mt-3" style="max-width:1330px;padding-top:30px;" role="main">
+  <app-loading></app-loading>
+</div>
